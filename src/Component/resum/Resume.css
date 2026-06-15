@@ -1,0 +1,212 @@
+.TitelResume {
+  text-align: center;
+  margin-top: 150px;
+}
+
+.education {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.MainEdIcon,
+.MainCeIcon,
+.MainSKIcon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.EdIcon,
+.CeIcon,
+.SKIcon {
+  padding: 10px;
+  background: var(--ColorinBorder);
+  border-radius: 50%;
+  font-size: 30px;
+  color: white;
+}
+
+.education h3 {
+  font-size: 25px;
+}
+
+.continerCeucation {
+  margin-top: 20px;
+}
+
+.continerEducation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+/* إنجليزي */
+.lang-en .continerEducation {
+  margin-left: 30px;
+}
+
+.lang-en .continerEducation::after {
+  left: 0;
+}
+
+.lang-en .continerEducation::before {
+  left: 4px;
+}
+
+/* عربي */
+.lang-ar .continerEducation {
+  margin-right: 30px;
+}
+
+.lang-ar .continerEducation::after {
+  right: 0;
+}
+
+.lang-ar .continerEducation::before {
+  right: 4px;
+}
+
+.continerEducation::after {
+  content: "";
+  background-color: var(--ColorinBorder);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+}
+
+.continerEducation::before {
+  content: "";
+  background-color: var(--ColorOne);
+  height: 100%;
+  width: 2px;
+  position: absolute;
+}
+
+.discEducation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: var(--ColorThree);
+  padding: 20px;
+  border-radius: 20px;
+  color: antiquewhite;
+  box-shadow: -2px 21px 26px -26px var(--ColorinBorder);
+}
+
+/* إنجليزي */
+.lang-en .discEducation {
+  margin-left: 10px;
+}
+
+/* عربي */
+.lang-ar .discEducation {
+  margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+  .discEducation {
+    flex-direction: column;
+  }
+  .education {
+    overflow-x: hidden;
+  }
+}
+
+.workexperience h3 {
+  font-size: 25px;
+}
+
+.BoxMab {
+  display: flex;
+  gap: 50px;
+  margin-left: 0px;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .BoxMab {
+    flex-direction: column;
+  }
+}
+
+.MabOne,
+.MabTow {
+  flex: 50%;
+  background-color: var(--ColorThree);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: -2px 21px 26px -26px var(--ColorinBorder);
+  color: antiquewhite;
+  line-height: 1.5;
+  font-size: 20px;
+}
+
+@media (max-width:600px) {
+  .workexperience {
+    overflow-x: hidden;
+  }
+}
+
+.Skills {
+  margin-top: 25px;
+}
+
+.Skills h3 {
+  font-size: 30px;
+}
+
+.BoxSkills {
+  display: flex;
+  flex-wrap: wrap;
+  color: var(--ColorinBorder);
+  flex-direction: row;
+  justify-content: start;
+  padding: 0;
+  gap: 40px;
+}
+
+.BoxSkills .continerSKucation {
+  /* flex: 1; */
+}
+
+@media (max-width: 600px) {
+  .BoxSkills {
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    gap: 0px;
+  }
+  .BoxSkills .continerSKucation {
+    flex: 0 0 50%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .BoxSkills {
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+  }
+}
+
+.discSKucation {
+  padding: 0px;
+}
+
+.discSKucation p {
+  font-size: 80px;
+  padding: 0;
+  margin: 0 0 -20px 0;
+}
+
+.continerSKucation {
+  text-align: center;
+}

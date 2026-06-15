@@ -1,0 +1,251 @@
+.continarNavBar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.BoxNavBar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.Logo {
+  flex: 40%;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+/* إنجليزي */
+.lang-en .Logo {
+  margin-left: 60px;
+}
+
+/* عربي */
+.lang-ar .Logo {
+  margin-right: 60px;
+}
+
+.Logo h2 {
+  margin-top: 30px;
+}
+
+.LinkList {
+  flex: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: red; */
+}
+
+.point {
+  width: 7px;
+  height: 7px;
+  background: var(--ColorinBorder);
+  border-radius: 50%;
+  margin-top: 33px;
+}
+
+.LinkList .activ {
+  border-bottom: 2px solid var(--ColorinBorder);
+  color: var(--ColorinBorder);
+}
+
+.LinkList ul {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  list-style: none;
+  margin-top: 20px;
+  /* background: green; */
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.LinkList ul li {
+  width: 100px;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.LinkList ul li:hover {
+  color: var(--ColorinBorder);
+}
+
+.LinkList ul li a {
+  text-decoration: none;
+  color: inherit;
+  padding: 5px 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.lang-btn {
+  background: var(--GradientOne);
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.lang-btn:hover {
+  transform: translateY(-2px);
+}
+
+.BergerIcon {
+  visibility: hidden;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .LinkList ul {
+    display: none;
+  }
+  .BergerIcon {
+    visibility: visible;
+    font-size: 40px;
+    z-index: 10;
+  }
+  .LinkList {
+    justify-content: end;
+    margin-top: 12px;
+  }
+  .continar {
+    width: 90%;
+  }
+  .lang-en .Logo {
+    margin-left: 0;
+  }
+  .lang-ar .Logo {
+    margin-right: 0;
+  }
+}
+
+.tagsTow {
+  position: fixed;
+  top: 85px;
+  width: 30%;
+  height: auto;
+  background: var(--ColorTow);
+  overflow: hidden;
+  z-index: 1000;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* إنجليزي */
+.lang-en .tagsTow {
+  right: 0;
+}
+
+/* عربي */
+.lang-ar .tagsTow {
+  left: 0;
+}
+
+.divClosTags {
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+}
+
+/* إنجليزي */
+.lang-en .divClosTags {
+  justify-content: end;
+  margin-left: -20px;
+}
+
+/* عربي */
+.lang-ar .divClosTags {
+  justify-content: start;
+  margin-right: -20px;
+}
+
+.Closeicon {
+  font-size: 20px;
+}
+
+/* أنميشن */
+.lang-en .animateShow {
+  animation: ShowTagsEN 1s ease forwards;
+}
+
+.lang-en .animateHide {
+  animation: HiddinTagsEN 1s ease forwards;
+}
+
+@keyframes ShowTagsEN {
+  from {
+    transform: translateX(325px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes HiddinTagsEN {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(325px);
+  }
+}
+
+.lang-ar .animateShow {
+  animation: ShowTagsAR 1s ease forwards;
+}
+
+.lang-ar .animateHide {
+  animation: HiddinTagsAR 1s ease forwards;
+}
+
+@keyframes ShowTagsAR {
+  from {
+    transform: translateX(-325px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes HiddinTagsAR {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-325px);
+  }
+}
+
+.tagsTow ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tagsTow ul li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.tagsTow ul li a {
+  text-decoration: none;
+  color: white;
+}

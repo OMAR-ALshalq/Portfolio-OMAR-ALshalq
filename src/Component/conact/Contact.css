@@ -1,0 +1,137 @@
+.BoxConatct {
+  margin-top: 70px;
+  margin-bottom: 70px;
+  overflow: hidden;
+}
+
+.BoxConatct h2 {
+  text-align: center;
+}
+
+.BoxMainConatct {
+  display: flex;
+  margin-top: 70px;
+}
+
+.BoxData {
+  flex: 0 0 40%;
+}
+
+.cardData {
+  display: flex;
+  align-items: center;
+  margin: 0 0 30px 0;
+}
+
+.cardData .icon {
+  font-size: 35px;
+  color: var(--ColorinBorder);
+}
+
+/* إنجليزي */
+.lang-en .cardData .icon {
+  margin-right: 10px;
+  margin-top: -10px;
+}
+
+/* عربي */
+.lang-ar .cardData .icon {
+  margin-left: 10px;
+  margin-top: -10px;
+}
+
+.cardData .titleAndinfo p,
+.cardData .titleAndinfo a {
+  margin: 0;
+  font-size: 25px;
+}
+
+.cardData .titleAndinfo a {
+  text-decoration: none;
+  color: var(--ColorinBorder);
+  font-size: 20px;
+}
+
+.BoxForm {
+  flex: 1;
+}
+
+.BoxForm form {
+  display: flex;
+  flex-direction: column;
+}
+
+.BoxForm input {
+  padding: 10px;
+}
+
+.BoxConatct input,
+.BoxForm textarea {
+  border: 2px solid var(--ColorinBorder);
+  background: transparent;
+  color: var(--ColorinBorder);
+}
+
+.BoxForm input:focus,
+.BoxForm textarea:focus,
+.BoxForm button:focus {
+  outline: none;
+}
+
+.BoxForm input,
+.BoxForm textarea,
+.BoxForm button {
+  margin-bottom: 20px;
+}
+
+.BoxForm button {
+  width: 23%;
+  padding: 5px 5px;
+  background: var(--secondaryColor);
+  border: 2px solid transparent;
+  color: white;
+  outline: none;
+  cursor: pointer;
+}
+
+.BoxForm button:focus {
+  outline: none;
+}
+
+.Massage {
+  display: flex;
+  align-items: center;
+}
+
+.Massage .textMassage {
+  font-size: 25px;
+}
+
+@media (max-width: 1024px) {
+  .BoxMainConatct {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .BoxData {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 600px) {
+  .BoxConatct {
+    overflow: hidden;
+  }
+  .cardData .icon {
+    font-size: 20px;
+  }
+  .cardData .titleAndinfo p,
+  .cardData .titleAndinfo a {
+    font-size: 14px;
+  }
+  .cardData .titleAndinfo a {
+    font-size: 10px;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+}

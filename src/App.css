@@ -1,0 +1,161 @@
+/* #root {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+}
+
+ :root {
+  --MainColor: #0f1a1c;
+  --secondaryColor: #5eead4;
+  --ColorBackground: #182c2e;
+  --ColorinBorder: #5eead4;
+  --ColorThree: rgba(94, 234, 212, 0.06);
+  --ColorOne: #1d383a;
+  --ColorTow: #152628;
+  --ColorMain: #0f1a1c;
+  --GradientOne: linear-gradient(135deg, #5eead4 0%, #0d9488 100%);
+  --GradientTwo: linear-gradient(135deg, #182c2e 0%, #1d383a 100%);
+  --TextPrimary: #e2e8f0;
+  --TextSecondary: #94a3b8;
+  --Accent: #2dd4bf;
+} 
+
+:root {
+  --MainColor: #0f172a;
+  --secondaryColor: #94a3b8;
+  --ColorBackground: #1a2236;
+  --ColorinBorder: #64748b;
+  --ColorThree: rgba(100, 116, 139, 0.06);
+  --ColorOne: #1e293b;
+  --ColorTow: #162032;
+  --ColorMain: #0f172a;
+  --GradientOne: linear-gradient(135deg, #94a3b8 0%, #64748b 100%);
+  --GradientTwo: linear-gradient(135deg, #1a2236 0%, #1e293b 100%);
+  --TextPrimary: #e2e8f0;
+  --TextSecondary: #94a3b8;
+  --Accent: #cbd5e1;
+  --CardBg: #1a2236;
+} 
+
+:root {
+  --MainColor: #171a1e;
+  --secondaryColor: #8fa3b8;
+  --ColorBackground: #1e2228;
+  --ColorinBorder: #6b8299;
+  --ColorThree: rgba(107, 130, 153, 0.05);
+  --ColorOne: #252a31;
+  --ColorTow: #1a1d23;
+  --ColorMain: #171a1e;
+  --GradientOne: linear-gradient(135deg, #8fa3b8 0%, #6b8299 100%);
+  --GradientTwo: linear-gradient(135deg, #1e2228 0%, #252a31 100%);
+  --TextPrimary: #e8ecf0;
+  --TextSecondary: #929ba4;
+  --Accent: #b8c5d0;
+  --CardBg: #1e2228;
+}
+.Box {
+  display: flex;
+  justify-content: center;
+}
+
+.continar {
+  width: 75%;
+}
+
+body {
+  background: var(--ColorMain);
+  color: var(--TextPrimary);
+  overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.continar {
+  animation: fadeInUp 0.8s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */
+
+#root {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+}
+
+:root {
+  --MainColor: #171a1e;
+  --secondaryColor: #8fa3b8;
+  --ColorBackground: #1e2228;
+  --ColorinBorder: #6b8299;
+  --ColorThree: rgba(107, 130, 153, 0.05);
+  --ColorOne: #252a31;
+  --ColorTow: #1a1d23;
+  --ColorMain: #171a1e;
+  --GradientOne: linear-gradient(135deg, #8fa3b8 0%, #6b8299 100%);
+  --GradientTwo: linear-gradient(135deg, #1e2228 0%, #252a31 100%);
+  --TextPrimary: #e8ecf0;
+  --TextSecondary: #929ba4;
+  --Accent: #b8c5d0;
+  --CardBg: #1e2228;
+}
+
+.Box {
+  display: flex;
+  justify-content: center;
+}
+
+.continar {
+  width: 75%;
+}
+
+body {
+  background: var(--ColorMain);
+  color: var(--TextPrimary);
+  overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* تأثيرات عامة */
+.continar {
+  animation: fadeInUp 0.8s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============ تنسيقات اللغة العربية ============ */
+.lang-ar {
+  direction: rtl;
+  text-align: right;
+}
+
+.lang-en {
+  direction: ltr;
+  text-align: left;
+}

@@ -1,0 +1,156 @@
+.Box {
+  /* height: 100vh; */
+}
+
+.MainBoxHero {
+}
+
+.continarHero {
+  height: 100%;
+  margin-top: 50px;
+  overflow: visible;
+}
+
+.BoxTextImage {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background: red; */
+}
+
+.Texthero {
+  flex: 50%;
+}
+
+.Texthero h4:nth-child(1) {
+  color: var(--ColorinBorder);
+  font-size: 15px;
+  margin: 0 0 5px 0;
+}
+
+.Texthero h2 {
+  font-size: 60px;
+  margin: 0;
+}
+
+.Texthero h2:nth-child(3) {
+  color: var(--ColorinBorder);
+}
+
+.Iconshero {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.Iconshero .ACV a {
+  text-decoration: none;
+  color: var(--ColorinBorder);
+  border: 2px solid var(--ColorinBorder);
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.Iconshero .ACV a .IconCv {
+  margin: 2px 0 0 0;
+}
+
+.Iconshero .Asocil {
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.Iconshero .Asocil a {
+  color: var(--ColorinBorder);
+  font-size: 20px;
+  border: 2px solid var(--ColorinBorder);
+  border-radius: 50%;
+  display: flex;
+  padding: 5px;
+}
+
+.Imagehero {
+  flex: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: green; */
+}
+
+.Imagehero img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+}
+
+.Imagehero svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Imagehero svg circle {
+  stroke: var(--secondaryColor);
+}
+
+.rotating-circle {
+  transform-origin: 50% 52%;
+  animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1024px) {
+  .BoxTextImage {
+    flex-direction: column-reverse;
+  }
+  .Texthero {
+    margin-bottom: 20px;
+  }
+  .Texthero h2:nth-child(2) {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .Texthero {
+    text-align: center;
+  }
+  .Texthero h2:nth-child(2) {
+    font-size: 30px;
+  }
+  .Texthero h2:nth-child(3) {
+    font-size: 30px;
+  }
+  .Iconshero {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .Iconshero .Asocil {
+    gap: 20px;
+    justify-content: center;
+  }
+  .BoxTextImage .Imagehero img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 2px solid var(--ColorinBorder);
+    margin: -30px 0 20px 0;
+  }
+}

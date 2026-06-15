@@ -1,0 +1,132 @@
+.continarFooter {
+  width: 100%;
+  background: var(--ColorBackground);
+}
+
+.BoxFooterOne {
+  display: flex;
+  margin-top: 30px;
+}
+
+.BoxFooterMain h2 {
+  color: var(--ColorinBorder);
+}
+
+.InformationMy {
+  flex: 0 0 35%;
+}
+
+/* إنجليزي */
+.lang-en .InformationMy {
+  margin-left: 50px;
+}
+
+/* عربي */
+.lang-ar .InformationMy {
+  margin-right: 50px;
+}
+
+.InformationMy p {
+  width: 85%;
+  line-height: 1.5;
+}
+
+.InformationMy .Asocil {
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.InformationMy .Asocil a {
+  color: var(--ColorinBorder);
+  font-size: 20px;
+  border: 2px solid var(--ColorinBorder);
+  border-radius: 50%;
+  display: flex;
+  padding: 5px;
+}
+
+.QuikLinks {
+  flex: 0 0 35%;
+}
+
+.QuikLinks .links {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.QuikLinks .links a {
+  color: var(--color-light);
+  text-decoration: none;
+}
+
+.BoxFooterMain .HR {
+  margin: 50px 50px 20px 50px;
+  border: 1px solid rgb(119, 117, 117);
+}
+
+.BoxFooterTow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.BoxFooterTow .textOne {
+  font-size: 30px;
+}
+
+.BoxFooterTow .textOne p {
+  margin: 0 0 20px 0;
+}
+
+.BoxFooterTow .textTow a {
+  text-decoration: none;
+  color: var(--color-light);
+  margin: 0 10px 0 10px;
+}
+
+@media (max-width:1024px) {
+  .BoxFooterOne {
+    flex-direction: column;
+  }
+  .InformationMy,
+  .QuikLinks,
+  .Services {
+    margin-bottom: 20px;
+  }
+  
+  /* إنجليزي */
+  .lang-en .QuikLinks,
+  .lang-en .Services {
+    margin-left: 50px;
+  }
+  
+  /* عربي */
+  .lang-ar .QuikLinks,
+  .lang-ar .Services {
+    margin-right: 50px;
+  }
+  
+  .QuikLinks h2,
+  .Services h2 {
+    color: var(--secondaryColor);
+  }
+  .BoxFooterTow .textOne p {
+    font-size: 20px;
+  }
+  .BoxFooterTow .textTow {
+    font-size: 10px;
+  }
+}
+
+@media (max-width:600px) {
+  .BoxFooterTow .textOne p {
+    font-size: 15px;
+  }
+  .BoxFooterTow .textTow {
+    font-size: 8px;
+  }
+}

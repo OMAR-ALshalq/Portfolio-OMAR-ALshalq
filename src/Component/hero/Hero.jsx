@@ -38,7 +38,7 @@ export default function Hero() {
                 <div className="ACV">
                   <a
                     data-aos="fade-right"
-                    data-aos-delay="2000"
+                    data-aos-delay="0"
                     href={MYCV}
                     download
                   >
@@ -50,7 +50,7 @@ export default function Hero() {
                   <a
                     href="https://github.com/OMAR-Alshalq"
                     data-aos="fade-right"
-                    data-aos-delay="2650"
+                    data-aos-delay="0"
                   >
                     <FaGithub />
                   </a>

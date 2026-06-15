@@ -6,14 +6,17 @@ import { RiInstagramFill } from "react-icons/ri";
 import { useLanguage } from "../../LanguageContext";
 import translations from "../../translations";
 
-import MYCV from "../../../public/CV/محمد عمر الشلق.pdf";
-// import MYIMG from "../../../public/Image/IMG_20250126_115144 (1).png";
+import MYCV_AR from "../../../public/CV/محمد عمر الشلق.pdf";
+import MYCV_EN from "../../../public/CV/Mohammed Omar  Al-Shalq.pdf";
 
 import "./Hero.css";
 
 export default function Hero() {
   const { language } = useLanguage();
   const t = translations[language];
+
+  // اختيار ملف CV حسب اللغة
+  const MYCV = language === "ar" ? MYCV_AR : MYCV_EN;
 
   return (
     <div className="Box">

@@ -1,7 +1,21 @@
-.continarNavBar {
+.navbar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  z-index: 1000;
+  background: var(--ColorMain);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.continarNavBar {
+  width: 90%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .BoxNavBar {
@@ -17,18 +31,16 @@
   gap: 3px;
 }
 
-/* إنجليزي */
 .lang-en .Logo {
-  margin-left: 60px;
+  margin-left: 0;
 }
 
-/* عربي */
 .lang-ar .Logo {
-  margin-right: 60px;
+  margin-right: 0;
 }
 
 .Logo h2 {
-  margin-top: 30px;
+  /* margin-top: 0; */
 }
 
 .LinkList {
@@ -36,7 +48,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background: red; */
 }
 
 .point {
@@ -44,7 +55,6 @@
   height: 7px;
   background: var(--ColorinBorder);
   border-radius: 50%;
-  margin-top: 33px;
 }
 
 .LinkList .activ {
@@ -57,8 +67,6 @@
   display: flex;
   gap: 5px;
   list-style: none;
-  margin-top: 20px;
-  /* background: green; */
   align-items: center;
   justify-content: space-evenly;
 }
@@ -68,10 +76,6 @@
   border-bottom: 2px solid transparent;
   padding-bottom: 2px;
   transition: 0.5s;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
 }
 
 .LinkList ul li:hover {
@@ -117,118 +121,44 @@
   .BergerIcon {
     visibility: visible;
     font-size: 40px;
-    z-index: 10;
   }
   .LinkList {
     justify-content: end;
-    margin-top: 12px;
   }
-  .continar {
+  .continarNavBar {
     width: 90%;
-  }
-  .lang-en .Logo {
-    margin-left: 0;
-  }
-  .lang-ar .Logo {
-    margin-right: 0;
   }
 }
 
 .tagsTow {
   position: fixed;
-  top: 85px;
+  top: 60px;
   width: 30%;
   height: auto;
   background: var(--ColorTow);
-  overflow: hidden;
-  z-index: 1000;
+  overflow: visible;
   padding: 20px;
   border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* إنجليزي */
 .lang-en .tagsTow {
   right: 0;
 }
 
-/* عربي */
 .lang-ar .tagsTow {
   left: 0;
 }
 
-.divClosTags {
-  width: 100%;
-  display: flex;
-  margin-top: 20px;
-}
-
-/* إنجليزي */
-.lang-en .divClosTags {
-  justify-content: end;
-  margin-left: -20px;
-}
-
-/* عربي */
-.lang-ar .divClosTags {
-  justify-content: start;
-  margin-right: -20px;
-}
-
 .Closeicon {
   font-size: 20px;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s;
 }
 
-/* أنميشن */
-.lang-en .animateShow {
-  animation: ShowTagsEN 1s ease forwards;
-}
-
-.lang-en .animateHide {
-  animation: HiddinTagsEN 1s ease forwards;
-}
-
-@keyframes ShowTagsEN {
-  from {
-    transform: translateX(325px);
-  }
-  to {
-    transform: translateX(0px);
-  }
-}
-
-@keyframes HiddinTagsEN {
-  from {
-    transform: translateX(0px);
-  }
-  to {
-    transform: translateX(325px);
-  }
-}
-
-.lang-ar .animateShow {
-  animation: ShowTagsAR 1s ease forwards;
-}
-
-.lang-ar .animateHide {
-  animation: HiddinTagsAR 1s ease forwards;
-}
-
-@keyframes ShowTagsAR {
-  from {
-    transform: translateX(-325px);
-  }
-  to {
-    transform: translateX(0px);
-  }
-}
-
-@keyframes HiddinTagsAR {
-  from {
-    transform: translateX(0px);
-  }
-  to {
-    transform: translateX(-325px);
-  }
+.Closeicon:hover {
+  color: var(--ColorinBorder);
 }
 
 .tagsTow ul {
@@ -241,11 +171,55 @@
 }
 
 .tagsTow ul li {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
 .tagsTow ul li a {
   text-decoration: none;
   color: white;
+  cursor: pointer;
+  display: block;
+  padding: 5px 10px;
+  transition: 0.3s;
+}
+
+.tagsTow ul li a:hover {
+  color: var(--ColorinBorder);
+}
+
+/* أنميشن */
+.lang-en .animateShow {
+  animation: ShowTagsEN 0.5s ease forwards;
+}
+
+.lang-en .animateHide {
+  animation: HiddinTagsEN 0.5s ease forwards;
+}
+
+@keyframes ShowTagsEN {
+  from { transform: translateX(325px); }
+  to { transform: translateX(0px); }
+}
+
+@keyframes HiddinTagsEN {
+  from { transform: translateX(0px); }
+  to { transform: translateX(325px); }
+}
+
+.lang-ar .animateShow {
+  animation: ShowTagsAR 0.5s ease forwards;
+}
+
+.lang-ar .animateHide {
+  animation: HiddinTagsAR 0.5s ease forwards;
+}
+
+@keyframes ShowTagsAR {
+  from { transform: translateX(-325px); }
+  to { transform: translateX(0px); }
+}
+
+@keyframes HiddinTagsAR {
+  from { transform: translateX(0px); }
+  to { transform: translateX(-325px); }
 }

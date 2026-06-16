@@ -13,14 +13,16 @@ import Footer from "./Component/footer/Footer";
 function App() {
   return (
     <LanguageProvider>
-      <ParticlesBackground />
-      <div style={{ position: "relative", zIndex: 1 }}>
-        <NavBar />
-        <Hero />
-        <Resume />
-        <Mainprojict />
-        <Contact />
-        <Footer />
+      <div style={{ position: "relative", zIndex: 0 }}>
+        <ParticlesBackground />
+        <div style={{ position: "relative", zIndex: 1 }}>
+          <NavBar />
+          <Hero />
+          <Resume />
+          <Mainprojict />
+          <Contact />
+          <Footer />
+        </div>
       </div>
     </LanguageProvider>
   );

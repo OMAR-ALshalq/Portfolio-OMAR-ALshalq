@@ -93,6 +93,7 @@ html {
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0;
+  position: relative;
 }
 
 :root {
@@ -132,6 +133,8 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
+    position: relative;
+
 }
 
 html {
@@ -164,4 +167,14 @@ html {
 .lang-en {
   direction: ltr;
   text-align: left;
+}
+
+/* إصلاح مشكلة canvas مع العناصر */
+.app-content {
+  position: relative;
+  z-index: 2;
+}
+
+.app-content * {
+  pointer-events: auto !important;
 }

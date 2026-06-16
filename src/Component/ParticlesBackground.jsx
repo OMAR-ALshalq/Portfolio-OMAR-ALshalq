@@ -14,7 +14,7 @@ export default function ParticlesBackground() {
 
     const resize = () => {
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      canvas.height = document.body.scrollHeight;
     };
 
     resize();
@@ -24,35 +24,44 @@ export default function ParticlesBackground() {
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 3 + 1.5;
-        this.speedX = Math.random() * 0.5 - 0.25;
-        this.speedY = Math.random() * 0.5 - 0.25;
-        this.opacity = Math.random() * 0.4 + 0.4;
+        this.size = Math.random() * 3.5 + 2;
+        this.speedX = Math.random() * 0.6 - 0.3;
+        this.speedY = Math.random() * 0.6 - 0.3;
+        this.opacity = Math.random() * 0.5 + 0.5;
       }
 
       update() {
         this.x += this.speedX;
         this.y += this.speedY;
-
         if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
         if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
       }
 
       draw() {
+        // النقطة الأساسية
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(143, 163, 184, ${this.opacity})`;
         ctx.fill();
 
-        // هالة حول النقطة
+        // هالة داخلية
         ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size + 3, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(143, 163, 184, ${this.opacity * 0.3})`;
+        ctx.arc(this.x, this.y, this.size + 4, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(143, 163, 184, ${this.opacity * 0.4})`;
+        ctx.fill();
+
+        // هالة خارجية
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size + 8, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(143, 163, 184, ${this.opacity * 0.15})`;
         ctx.fill();
       }
     }
 
-    const particleCount = 70;
+    const particleCount = Math.min(
+      100,
+      Math.floor((canvas.width * canvas.height) / 12000)
+    );
     for (let i = 0; i < particleCount; i++) {
       particles.push(new Particle());
     }
@@ -64,12 +73,12 @@ export default function ParticlesBackground() {
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 180) {
+          if (distance < 200) {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(143, 163, 184, ${0.2 * (1 - distance / 180)})`;
-            ctx.lineWidth = 1;
+            ctx.strokeStyle = `rgba(143, 163, 184, ${0.3 * (1 - distance / 200)})`;
+            ctx.lineWidth = 1.2;
             ctx.stroke();
           }
         }
@@ -78,12 +87,10 @@ export default function ParticlesBackground() {
 
     function animate() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      particles.forEach((particle) => {
-        particle.update();
-        particle.draw();
+      particles.forEach((p) => {
+        p.update();
+        p.draw();
       });
-
       drawLines();
       animationFrameId = requestAnimationFrame(animate);
     }

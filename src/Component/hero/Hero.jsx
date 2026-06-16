@@ -28,7 +28,7 @@ export default function Hero() {
 
   return (
     <div className="Box">
-      <div className="continar continarHero">
+      <div className="continar continarHero" id="home">
         <div className="MainBoxHero">
           <div className="BoxTextImage">
             <div className="Texthero">

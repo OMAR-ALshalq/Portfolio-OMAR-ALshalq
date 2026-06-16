@@ -1,0 +1,91 @@
+/* ============ الأنيميشن الأساسية ============ */
+
+/* Fade Up */
+.anim-fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.anim-fade-up.anim-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade Right */
+.anim-fade-right {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.anim-fade-right.anim-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Fade Left */
+.anim-fade-left {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.anim-fade-left.anim-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Zoom In */
+.anim-zoom-in {
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.anim-zoom-in.anim-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Zoom In Right */
+.anim-zoom-in-right {
+  opacity: 0;
+  transform: scale(0.7) translateX(-40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.anim-zoom-in-right.anim-visible {
+  opacity: 1;
+  transform: scale(1) translateX(0);
+}
+
+/* Zoom In Up */
+.anim-zoom-in-up {
+  opacity: 0;
+  transform: scale(0.7) translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.anim-zoom-in-up.anim-visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* ============ التأخيرات ============ */
+
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+.delay-600 { transition-delay: 0.6s; }
+.delay-700 { transition-delay: 0.7s; }
+.delay-800 { transition-delay: 0.8s; }
+.delay-900 { transition-delay: 0.9s; }
+.delay-1000 { transition-delay: 1s; }
+.delay-1500 { transition-delay: 1.5s; }
+.delay-2000 { transition-delay: 2s; }
+.delay-2500 { transition-delay: 2.5s; }
+.delay-2600 { transition-delay: 2.6s; }
+.delay-2650 { transition-delay: 2.65s; }

@@ -7,6 +7,7 @@ import emailjs from "@emailjs/browser";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { useLanguage } from "../../LanguageContext";
 import translations from "../../translations";
+import useAnimation from "../../hooks/useAnimation";
 
 const ContactData = (t) => [
   {
@@ -44,6 +45,9 @@ export default function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
+  const [refTitle, visTitle] = useAnimation(0.1, 500);
+  const [refBox, visBox] = useAnimation(0.1, 500);
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -78,11 +82,20 @@ export default function Contact() {
     <div className="Box">
       <div className="continar continarContact">
         <div className="BoxConatct">
-          <h2 data-aos="fade-up">{t.contactTitle}</h2>
-          <div id="contact" className="BoxMainConatct">
+          <h2
+            ref={refTitle}
+            className={`anim-fade-up ${visTitle ? "anim-visible" : ""}`}
+          >
+            {t.contactTitle}
+          </h2>
+          <div
+            id="contact"
+            ref={refBox}
+            className={`BoxMainConatct anim-fade-up ${visBox ? "anim-visible" : ""}`}
+          >
             <div className="BoxData">
               {contactData.map(({ id, icon, title, info, link }) => (
-                <div key={id} className="cardData" data-aos="fade-right">
+                <div key={id} className="cardData">
                   <div className="icon">{icon}</div>
                   <div className="titleAndinfo">
                     <p>{title}</p>
@@ -92,7 +105,7 @@ export default function Contact() {
               ))}
             </div>
             <div className="BoxForm">
-              <form ref={form} onSubmit={sendEmail} data-aos="fade-left">
+              <form ref={form} onSubmit={sendEmail}>
                 <input
                   type="text"
                   placeholder={t.fullName}
@@ -100,8 +113,6 @@ export default function Contact() {
                   id="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  data-aos="fade-left"
-                  data-aos-delay="300"
                 />
                 <input
                   type="email"
@@ -110,8 +121,6 @@ export default function Contact() {
                   id="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  data-aos="fade-left"
-                  data-aos-delay="500"
                 />
                 <textarea
                   rows={7}
@@ -120,8 +129,6 @@ export default function Contact() {
                   placeholder={t.yourMessage}
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  data-aos="fade-left"
-                  data-aos-delay="700"
                 ></textarea>
 
                 {showMassage && (

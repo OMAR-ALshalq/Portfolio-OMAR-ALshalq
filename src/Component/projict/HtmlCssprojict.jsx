@@ -2,12 +2,14 @@ import { GrClose } from "react-icons/gr";
 import { useState } from "react";
 import { useLanguage } from "../../LanguageContext";
 import translations from "../../translations";
+import useAnimation from "../../hooks/useAnimation";
 
 export default function HtmlCssprojict() {
   const { language } = useLanguage();
   const t = translations[language];
 
   const [hoveredId, setHoveredId] = useState(null);
+  const [ref, visible] = useAnimation(0.1, 500);
 
   const ArrayAllprojict = [
     {
@@ -58,11 +60,15 @@ export default function HtmlCssprojict() {
   ];
 
   return (
-    <div data-aos="zoom-in-up" className="allprojict" id="HtmlCssProject">
+    <div
+      ref={ref}
+      className={`allprojict anim-zoom-in-up ${visible ? "anim-visible" : ""}`}
+      id="HtmlCssProject"
+    >
       {ArrayAllprojict.map(({ id, img, title, dis, disTow, source, view }) => (
         <div key={id} className="projict">
           <div className="imajprojict">
-            <img src={img} alt={title}></img>
+            <img src={img} alt={title} loading="lazy"></img>
           </div>
           <div className="titledis">
             <h2>{title}</h2>

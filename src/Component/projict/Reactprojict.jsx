@@ -2,12 +2,14 @@ import { GrClose } from "react-icons/gr";
 import { useState } from "react";
 import { useLanguage } from "../../LanguageContext";
 import translations from "../../translations";
+import useAnimation from "../../hooks/useAnimation";
 
 export default function Reactprojict() {
   const { language } = useLanguage();
   const t = translations[language];
 
   const [hoveredId, setHoveredId] = useState(null);
+  const [ref, visible] = useAnimation(0.1, 500);
 
   const ArrayAllprojict = [
     {
@@ -73,45 +75,51 @@ export default function Reactprojict() {
   ];
 
   return (
-    <div data-aos="zoom-in-right" className="allprojict" id="ReactProject">
-      {ArrayAllprojict.reverse().map(({ id, img, title, dis, disTow, source, view }) => (
-        <div key={id} className="projict">
-          <div className="imajprojict">
-            <img src={img} alt={title}></img>
+    <div
+      ref={ref}
+      className={`allprojict anim-zoom-in-right ${visible ? "anim-visible" : ""}`}
+      id="ReactProject"
+    >
+      {ArrayAllprojict.reverse().map(
+        ({ id, img, title, dis, disTow, source, view }) => (
+          <div key={id} className="projict">
+            <div className="imajprojict">
+              <img src={img} alt={title} loading="lazy"></img>
+            </div>
+            <div className="titledis">
+              <h2>{title}</h2>
+              <p>
+                {dis}
+                <span
+                  className="see-more-btn"
+                  onMouseEnter={() => setHoveredId(id)}
+                  onMouseLeave={() => setHoveredId(id)}
+                >
+                  {t.seeMore}
+                </span>
+              </p>
+            </div>
+            <div
+              className={`details-overlay ${hoveredId === id ? "active" : ""}`}
+              onMouseLeave={() => setHoveredId(null)}
+            >
+              <GrClose
+                className="close-icon"
+                onClick={() => setHoveredId(null)}
+              />
+              <p>{disTow}</p>
+            </div>
+            <div className="linkprojict">
+              <a href={source} target="_blank">
+                {t.github}
+              </a>
+              <a href={view} target="_blank">
+                {t.view}
+              </a>
+            </div>
           </div>
-          <div className="titledis">
-            <h2>{title}</h2>
-            <p>
-              {dis}
-              <span
-                className="see-more-btn"
-                onMouseEnter={() => setHoveredId(id)}
-                onMouseLeave={() => setHoveredId(id)}
-              >
-                {t.seeMore}
-              </span>
-            </p>
-          </div>
-          <div
-            className={`details-overlay ${hoveredId === id ? "active" : ""}`}
-            onMouseLeave={() => setHoveredId(null)}
-          >
-            <GrClose
-              className="close-icon"
-              onClick={() => setHoveredId(null)}
-            />
-            <p>{disTow}</p>
-          </div>
-          <div className="linkprojict">
-            <a href={source} target="_blank">
-              {t.github}
-            </a>
-            <a href={view} target="_blank">
-              {t.view}
-            </a>
-          </div>
-        </div>
-      ))}
+        )
+      )}
     </div>
   );
 }

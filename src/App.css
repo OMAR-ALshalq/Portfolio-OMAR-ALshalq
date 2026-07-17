@@ -138,7 +138,7 @@ body {
 
 html {
   scroll-behavior: smooth;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 /* إزالة أنيميشن القديم من continar */

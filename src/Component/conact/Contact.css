@@ -122,6 +122,12 @@
   .BoxConatct {
     overflow: hidden;
   }
+  .BoxData {
+    flex-direction: column;
+  }
+  .cardData {
+    margin: 0 0 10px 0;
+  }
   .cardData .icon {
     font-size: 20px;
   }

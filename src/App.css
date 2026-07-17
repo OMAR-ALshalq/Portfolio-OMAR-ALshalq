@@ -129,17 +129,16 @@ html {
 body {
   background: var(--ColorMain);
   color: var(--TextPrimary);
-  overflow-x: hidden;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-    position: relative;
-
+  position: relative;
 }
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 /* إزالة أنيميشن القديم من continar */

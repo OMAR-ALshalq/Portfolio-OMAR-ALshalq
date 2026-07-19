@@ -142,8 +142,8 @@ export default function AllProjict() {
           : "This site is a Dashboard... ",
       disTow:
         language === "ar"
-          ? "  إدارة كاملة للمنتجات/الفئات (CRUD)، ومراقبة الطلبات المباشرة مع تحديثات في الوقت الفعلي وتنبيهات صوتية (Socket.io)، وتغييرات الحالة، وإشعارات WhatsApp، والتحليلات (بطاقات الإحصائيات، وأفضل العناصر، والمخطط الساعي)."
-          : "Full product/category management (CRUD), live order monitoring with real-time updates & sound alerts (Socket.io), status changes, WhatsApp notifications, and analytics (stats cards, top items, hourly chart).",
+          ? "  إدارة كاملة للمنتجات/الفئات (CRUD)، ومراقبة الطلبات المباشرة مع تحديثات في الوقت الفعلي وتنبيهات صوتية (Socket.io)، وتغييرات الحالة، وإشعارات WhatsApp، والتحليلات (بطاقات الإحصائيات، وأفضل العناصر، والمخطط الساعي). Email:admin@menu.com / Password: 123456"
+          : "Full product/category management (CRUD), live order monitoring with real-time updates & sound alerts (Socket.io), status changes, WhatsApp notifications, and analytics (stats cards, top items, hourly chart). Email:admin@menu.com / Password: 123456",
       source: "https://github.com/OMAR-ALshalq/Dashboard-DigitalMenu",
       view: "https://dashboard-digitalmenu.onrender.com"
     }

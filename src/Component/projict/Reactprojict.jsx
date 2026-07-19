@@ -71,6 +71,36 @@ export default function Reactprojict() {
           : "This project is designed for car dealerships, enabling them to showcase their inventory online. It makes it easy for users to browse available vehicle models and compare different types of cars, offering a seamless browsing and search experience. Additionally, the site includes a dedicated dashboard that allows the dealership owner to add new vehicles, as well as delete or modify existing listings.",
       source: "https://github.com/OMAR-ALshalq/Car-Showroom",
       view: "https://car-showroom-36rh.onrender.com"
+    },
+    {
+      id: 8,
+      img: "Image/ImageProjict/imgAllprojict/DigitalMenu.png",
+      title: "DigitalMenu",
+      dis:
+        language === "ar"
+          ? "هذا الموقع عبارة عن قائمة طعام... "
+          : "This website is a food menu... ",
+      disTow:
+        language === "ar"
+          ? "واجهة للعميل تعرض الأصناف والتصنيفات مع إمكانية البحث، سلة شراء ذكية (إضافة مكونات، أحجام، كميات)، وتقديم طلبات (داخلي/سفري/خارجي) مع تتبع مباشر لحالة الطلب."
+          : "A customer interface that displays items and categories with search capabilities, a smart shopping cart (adding ingredients, sizes, quantities), and order submission (indoor/takeaway/external) with live order status tracking.",
+      source: "https://github.com/OMAR-ALshalq/DigitalMenu",
+      view: "https://digitalmenu-fir6.onrender.com"
+    },
+    {
+      id: 9,
+      img: "Image/ImageProjict/imgAllprojict/Dashboard-DigitalMenu.png",
+      title: "Dashboard-DigitalMenu",
+      dis:
+        language === "ar"
+          ? "هذا الموقع عبارة عن لوحة التحكم... "
+          : "This site is a Dashboard... ",
+      disTow:
+        language === "ar"
+          ? "  إدارة كاملة للمنتجات/الفئات (CRUD)، ومراقبة الطلبات المباشرة مع تحديثات في الوقت الفعلي وتنبيهات صوتية (Socket.io)، وتغييرات الحالة، وإشعارات WhatsApp، والتحليلات (بطاقات الإحصائيات، وأفضل العناصر، والمخطط الساعي). Email:admin@menu.com / Password: 123456"
+          : "Full product/category management (CRUD), live order monitoring with real-time updates & sound alerts (Socket.io), status changes, WhatsApp notifications, and analytics (stats cards, top items, hourly chart). Email:admin@menu.com / Password: 123456",
+      source: "https://github.com/OMAR-ALshalq/Dashboard-DigitalMenu",
+      view: "https://dashboard-digitalmenu.onrender.com"
     }
   ];
 

@@ -131,6 +131,21 @@ export default function AllProjict() {
           : "A customer interface that displays items and categories with search capabilities, a smart shopping cart (adding ingredients, sizes, quantities), and order submission (indoor/takeaway/external) with live order status tracking.",
       source: "https://github.com/OMAR-ALshalq/DigitalMenu",
       view: "https://digitalmenu-fir6.onrender.com"
+    },
+    {
+      id: 8,
+      img: "Image/ImageProjict/imgAllprojict/Dashboard-DigitalMenu.png",
+      title: "Dashboard-DigitalMenu",
+      dis:
+        language === "ar"
+          ? "هذا الموقع عبارة عن لوحة التحكم... "
+          : "This site is a Dashboard... ",
+      disTow:
+        language === "ar"
+          ? "  إدارة كاملة للمنتجات/الفئات (CRUD)، ومراقبة الطلبات المباشرة مع تحديثات في الوقت الفعلي وتنبيهات صوتية (Socket.io)، وتغييرات الحالة، وإشعارات WhatsApp، والتحليلات (بطاقات الإحصائيات، وأفضل العناصر، والمخطط الساعي)."
+          : "Full product/category management (CRUD), live order monitoring with real-time updates & sound alerts (Socket.io), status changes, WhatsApp notifications, and analytics (stats cards, top items, hourly chart).",
+      source: "https://github.com/OMAR-ALshalq/Dashboard-DigitalMenu",
+      view: "https://dashboard-digitalmenu.onrender.com"
     }
   ];
 

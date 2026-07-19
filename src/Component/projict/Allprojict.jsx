@@ -133,7 +133,7 @@ export default function AllProjict() {
       view: "https://digitalmenu-fir6.onrender.com"
     },
     {
-      id: 8,
+      id: 9,
       img: "Image/ImageProjict/imgAllprojict/Dashboard-DigitalMenu.png",
       title: "Dashboard-DigitalMenu",
       dis:
